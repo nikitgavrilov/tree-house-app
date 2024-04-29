@@ -1,0 +1,11 @@
+.clothes {
+  background: url("./../../../public/images/pages/home/little-clothes.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+  height: 100vh;
+}
+@media (max-width: 767px) {
+  .clothes {
+    background-position-x: -500px;
+  }
+}
