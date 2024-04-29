@@ -1,15 +1,15 @@
 import React from "react";
 import styles from "./Header.module.scss";
-import logo from "./logo.svg";
+import logo from "./../images/logo.svg";
 
 const Header: React.FC = () => {
   const [isMenuActive, setIsMenuActive] = React.useState(false);
 
   React.useEffect(() => {
     if (isMenuActive) {
-      document.body.classList.remove("lock");
-    } else {
       document.body.classList.add("lock");
+    } else {
+      document.body.classList.remove("lock");
     }
 
     return () => {
@@ -21,9 +21,9 @@ const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.rows}>
         <div className={styles.discounts}>
-          <h2 className={styles.title}>Get 25% off buying the entire capsule collection</h2>
+          <h2 className={styles.title}>Получите скидку 25% на покупку всей капсульной коллекции.</h2>
           <div className={styles.divider} />
-          <h2 className={styles.title}>Subscribe to us and get 15% off your first order</h2>
+          <h2 className={styles.title}>Подпишитесь на нас и получите скидку 15% на первый заказ</h2>
         </div>
         <div className="container">
           <div className={styles.body}>
@@ -32,13 +32,12 @@ const Header: React.FC = () => {
             </div>
             <nav className={styles.nav}>
               <ul className={isMenuActive ? `${styles.list} ${styles.active}` : `${styles.list}`}>
-                <li className={styles.link}>Shop +</li>
-                <li className={styles.link}>Our team</li>
-                <li className={styles.link}>Our impact</li>
-                <li className={styles.link}>Gift card</li>
+                <li className={styles.link}>Магазин</li>
+                <li className={styles.link}>Команда</li>
+                <li className={styles.link}>Наши вложения</li>
+                <li className={styles.link}>Подарочная карта</li>
                 <li className={styles.link}>FAQ</li>
-                <li className={styles.link}>Journal</li>
-                <li className={styles.link}>Contacts</li>
+                <li className={styles.link}>Контакты</li>
                 <div className={styles.tabletLinks}>
                   <li className={styles.link}>Регистрация</li>
                   <li className={styles.link}>Авторизация</li>
