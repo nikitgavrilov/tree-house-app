@@ -27,8 +27,8 @@ const Welcome: React.FC = () => {
             </div>
           </div>
           <div className={styles.info}>
-            <h3 className={styles.subTitle}>welcome</h3>
-            <h2 className={styles.title}>Hi, meet TreeHouse.</h2>
+            <h3 className="sub-title">welcome</h3>
+            <h2 className="title">Hi, meet TreeHouse.</h2>
             <p className={styles.text}>
               Тщательно созданная детская одежда, нейтральная с гендерной точки зрения, ориентированная на вашего малыша и
               разработанная с большой заботой о нашей планете и людях на ней.
