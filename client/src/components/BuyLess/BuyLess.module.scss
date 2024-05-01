@@ -1,0 +1,59 @@
+.buyLess {
+  margin: 320px 0 0 0;
+  padding: 0 15px;
+
+  h1 {
+    position: relative;
+
+    font-size: 100px;
+    font-family: "Playfair Display", serif;
+    color: #50735f;
+    text-transform: uppercase;
+    text-align: center;
+
+    img {
+      position: absolute;
+      bottom: 73px;
+    }
+  }
+}
+@media (max-width: 1102px) {
+  img {
+    bottom: 173px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .buyLess {
+    h1 {
+      font-size: 70px;
+    }
+    img {
+      bottom: 120px !important;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .buyLess {
+    h1 {
+      font-size: 50px;
+    }
+    img {
+      bottom: 85px !important;
+      left: 50%;
+    }
+  }
+}
+
+@media (max-width: 367px) {
+  .buyLess {
+    h1 {
+      font-size: 42px;
+    }
+    img {
+      bottom: 70px !important;
+      left: 20%;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.collection {
+  margin: 120px 0 0 0;
+
+  .leaf {
+    position: absolute;
+    right: 25px;
+    top: 65px;
+  }
+
+  .titles {
+    text-align: center;
+
+    margin: 0 0 40px 0;
+  }
+
+  .body {
+    .categories {
+      margin: 0 0 30px 0;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+
+      .item {
+        cursor: pointer;
+        font-size: 20px;
+        color: #50735f;
+        text-transform: uppercase;
+        background: url("./images//circle.svg") no-repeat center;
+        background-size: 0;
+        min-height: 10px;
+        padding: 15px;
+        transition: all 0.3s;
+
+        &:hover {
+          color: #c58a46;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .titles {
+    h2 {
+      font-size: 38px;
+    }
+  }
+  .list {
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .leaf {
+    display: none;
+  }
+}
