@@ -1,5 +1,7 @@
 import React from "react";
+
 import styles from "./Clothes.module.scss";
+
 import arrow from "./images/arrow.svg";
 import bottomArrow from "./images/bottom-arrow.svg";
 

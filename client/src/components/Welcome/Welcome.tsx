@@ -1,8 +1,7 @@
 import React from "react";
+
 import styles from "./Welcome.module.scss";
 
-import hand from "./images/hand.jpg";
-import boy from "./images/boy.jpg";
 import leaf from "./images/leaf.svg";
 import treehouse from "./images/treehouse.svg";
 import arrow from "./images/arrow.svg";
@@ -14,10 +13,10 @@ const Welcome: React.FC = () => {
         <div className={styles.body}>
           <div className={styles.images}>
             <div className={styles.hand}>
-              <img src={hand} alt="hand" />
+              <img src={require("./images/hand.jpg")} alt="hand" />
             </div>
             <div className={styles.boy}>
-              <img src={boy} alt="boy" />
+              <img src={require("./images/boy.jpg")} alt="boy" />
             </div>
             <div className={styles.leaf}>
               <img src={leaf} alt="leaf" />

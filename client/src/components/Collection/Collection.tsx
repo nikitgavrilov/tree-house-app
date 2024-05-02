@@ -1,6 +1,7 @@
 import React from "react";
+
 import styles from "./Collection.module.scss";
-import categories from "./images/categories.jpg";
+
 import leaf from "./images/leaf.svg";
 
 const Collection: React.FC = () => {
@@ -16,7 +17,7 @@ const Collection: React.FC = () => {
         </div>
         <div className={styles.body}>
           <div className={styles.categories}>
-            <img src={categories} alt="categories" />
+            <img src={require("./images/categories.jpg")} alt="categories" />
           </div>
           <ul className={styles.list}>
             <li className={styles.item}>Топы</li>

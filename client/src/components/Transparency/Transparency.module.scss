@@ -1,0 +1,136 @@
+.transparency {
+  margin: 120px 0 0 0;
+  position: relative;
+
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    .titles {
+      margin: 0 0 40px 0;
+    }
+
+    .image {
+      position: relative;
+      z-index: 2;
+
+      img:first-child {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .treehouse,
+  .decor01,
+  .decor02,
+  .decor03,
+  .decor04,
+  .decor05 {
+    position: absolute;
+  }
+  .treehouse {
+    top: -30px;
+    left: -80px;
+  }
+  .decor01 {
+    top: 180px;
+    left: -209px;
+  }
+  .decor02 {
+    top: 60px;
+    right: -150px;
+  }
+  .decor03 {
+    bottom: 0;
+    right: -250px;
+  }
+  .decor04 {
+    transform: translate(-50%);
+    top: 25%;
+    left: 50%;
+  }
+  .decor05 {
+    top: 163px;
+    right: -340px;
+  }
+}
+
+@media (max-width: 1340px) {
+  .decor02 {
+    top: 60px;
+    right: -110px !important;
+  }
+  .decor03 {
+    right: -200px !important;
+    bottom: 0 !important;
+  }
+  .decor04 {
+    left: 40% !important;
+  }
+  .decor05 {
+    right: -200px !important;
+  }
+}
+
+@media (max-width: 1136px) {
+  .decor02 {
+    top: 60px;
+    right: -150px;
+  }
+  .decor04 {
+    top: 30% !important;
+    left: 35% !important;
+  }
+}
+
+@media (max-width: 1040px) {
+  .decor01 {
+    left: -109px !important;
+  }
+  .decor02 {
+    top: 60px;
+    right: -50px !important;
+  }
+  .decor03 {
+    right: -100px !important;
+    bottom: 0 !important;
+  }
+  .decor04 {
+    display: none;
+  }
+  .decor05 {
+    right: -120px !important;
+  }
+}
+
+@media (max-width: 836px) {
+  .treehouse {
+    left: -20px !important;
+  }
+  .decor01 {
+    top: 250px !important;
+    left: -20px !important;
+  }
+  .decor02 {
+    right: -20px !important;
+  }
+  .decor03 {
+    display: none;
+  }
+  .decor05 {
+    right: -20px !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .decor01,
+  .decor02,
+  .decor05 {
+    display: none;
+  }
+}

@@ -1,9 +1,9 @@
 import React from "react";
+
 import styles from "./Care.module.scss";
+
 import star from "./images/star.svg";
-import hands from "./images/hands.jpg";
 import svgGirl from "./images/svg-girl.svg";
-import girls from "./images/girls.jpg";
 import one from "./images/one.svg";
 import two from "./images/two.svg";
 import three from "./images/three.svg";
@@ -44,13 +44,13 @@ const Care: React.FC = () => {
               </div>
             </div>
             <div className={styles.image}>
-              <img src={hands} alt="hands" />
+              <img src={require("./images/hands.jpg")} alt="hands" />
               <img src={svgGirl} alt="svgGirl" />
             </div>
           </div>
           <div className={styles.right}>
             <div className={styles.image}>
-              <img src={girls} alt="girls" />
+              <img src={require("./images/girls.jpg")} alt="girls" />
             </div>
             <div className={styles.description}>
               <div className={styles.item}>

@@ -1,11 +1,10 @@
 import React from "react";
+
 import styles from "./Discount.module.scss";
+
 import vectors from "./images/vectors.svg";
 import twentyFive from "./images/twenty-five.svg";
-import cloth from "./images/cloth.jpg";
-import girls from "./images/girls.jpg";
 import star from "./images/star.svg";
-// ИСПРАВИТЬ ====================================================
 import arrow from "./../Clothes/images/arrow.svg";
 
 const Discount: React.FC = () => {
@@ -31,12 +30,12 @@ const Discount: React.FC = () => {
           </div>
         </div>
         <div className={styles.cloth}>
-          <img src={cloth} alt="cloth" />
+          <img src={require("./images/cloth.jpg")} alt="cloth" />
         </div>
       </div>
       <div className={styles.right}>
         <div className={styles.girls}>
-          <img src={girls} alt="girls" />
+          <img src={require("./images/girls.jpg")} alt="girls" />
         </div>
         <div className={styles.info}>
           <h3 className="sub-title">

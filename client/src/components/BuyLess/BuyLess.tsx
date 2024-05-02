@@ -1,5 +1,7 @@
 import React from "react";
+
 import styles from "./BuyLess.module.scss";
+
 import boy from "./images/boy.svg";
 
 const BuyLess: React.FC = () => {
