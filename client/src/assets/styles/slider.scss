@@ -1,0 +1,28 @@
+.slick-prev {
+  top: -24px !important;
+  left: 0 !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  background: #d3d9d3 url("./../../components/PerfectMatch/images/arrow-slide.svg") no-repeat left/100% !important;
+  &::before {
+    content: "" !important;
+  }
+}
+
+.slick-next {
+  top: -40px !important;
+  left: 45px !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  transform: rotate(0deg) !important;
+  background: #d3d9d3 url("./../../components/PerfectMatch/images/arrow-slide-next.svg") no-repeat left/100% !important;
+  &::before {
+    content: "" !important;
+  }
+}
+
+.slick-dots {
+  bottom: -50px !important;
+}

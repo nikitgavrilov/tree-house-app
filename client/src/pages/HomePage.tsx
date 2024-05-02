@@ -6,6 +6,7 @@ import Care from "../components/Care/Care";
 import Collection from "../components/Collection/Collection";
 import Discount from "../components/Discount/Discount";
 import BuyLess from "../components/BuyLess/BuyLess";
+import PerfectMatch from "../components/PerfectMatch/PerfectMatch";
 
 const HomePage: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage: React.FC = () => {
       <Collection />
       <Discount />
       <BuyLess />
+      <PerfectMatch />
     </Layout>
   );
 };
