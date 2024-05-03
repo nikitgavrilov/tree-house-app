@@ -102,7 +102,7 @@ const PerfectMatch: React.FC = () => {
       <div className="container">
         <div className={styles.titles}>
           <h3 className="sub-title">твоя идеальная пара</h3>
-          <h2 className="title">Shop the look</h2>
+          <h2 className="title">Купить образ</h2>
         </div>
       </div>
       <div className={styles.content}>

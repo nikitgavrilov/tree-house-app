@@ -8,7 +8,7 @@ import arrow from "./images/arrow.svg";
 
 const Welcome: React.FC = () => {
   return (
-    <section className={styles.welcome}>
+    <section className={styles.welcome} id="welcome">
       <div className="container">
         <div className={styles.body}>
           <div className={styles.images}>
@@ -26,8 +26,8 @@ const Welcome: React.FC = () => {
             </div>
           </div>
           <div className={styles.info}>
-            <h3 className="sub-title">welcome</h3>
-            <h2 className="title">Hi, meet TreeHouse.</h2>
+            <h3 className="sub-title">добро пожаловать</h3>
+            <h2 className="title">Встречайте TreeHouse.</h2>
             <p className={styles.text}>
               Тщательно созданная детская одежда, нейтральная с гендерной точки зрения, ориентированная на вашего малыша и
               разработанная с большой заботой о нашей планете и людях на ней.

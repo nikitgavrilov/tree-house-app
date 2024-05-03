@@ -54,6 +54,12 @@
             color: #fff;
             padding: 0 0 12px 0;
             letter-spacing: 0.4px;
+
+            transition: color 0.3s;
+
+            &:hover {
+              color: #d9c7bb;
+            }
           }
         }
         img {

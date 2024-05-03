@@ -15,7 +15,7 @@ const Transparency: React.FC = () => {
       <div className={styles.body}>
         <div className={styles.titles}>
           <h3 className="sub-title">вы можете доверять</h3>
-          <h2 className="title">Transparency in every detail</h2>
+          <h2 className="title">Прозрачность в каждой детали</h2>
         </div>
         <div className={styles.image}>
           <img src={require("./images/bg.png")} alt="background" />

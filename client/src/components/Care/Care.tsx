@@ -19,7 +19,7 @@ const Care: React.FC = () => {
         <div className={styles.body}>
           <div className={styles.left}>
             <h3 className="sub-title">Наши заботы</h3>
-            <h2 className="title">We prioritize your peace of mind.</h2>
+            <h2 className="title">Приоритет - ваше спокойствие.</h2>
             <div className={styles.description}>
               <div className={styles.item}>
                 <h2 className={styles.label}>

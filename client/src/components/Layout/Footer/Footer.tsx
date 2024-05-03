@@ -1,5 +1,9 @@
 import React from "react";
+
+import { Link as ScrollLink } from "react-scroll";
+
 import styles from "./Footer.module.scss";
+
 import logo from "./../images/logo.svg";
 import leaf from "./../images/leaf.svg";
 import leaf2 from "./../images/leaf-2.svg";
@@ -18,7 +22,9 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <img src={leaf} alt="leaf" className={styles.leaf} />
       <img src={leaf2} alt="leaf2" className={styles.leaf2} />
-      <img src={up} alt="leaf2" className={styles.up} />
+      <ScrollLink to="clothes" spy={true} smooth={true} offset={0} duration={500}>
+        <img src={up} alt="leaf2" className={styles.up} />
+      </ScrollLink>
       <div className="container">
         <div className={styles.body}>
           <div className={styles.author}>

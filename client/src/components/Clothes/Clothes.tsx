@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link as ScrollLink } from "react-scroll";
+
 import styles from "./Clothes.module.scss";
 
 import arrow from "./images/arrow.svg";
@@ -7,7 +9,7 @@ import bottomArrow from "./images/bottom-arrow.svg";
 
 const Clothes: React.FC = () => {
   return (
-    <section className={styles.clothes}>
+    <section className={styles.clothes} id="clothes">
       <div className="container" style={{ position: "relative" }}>
         <div className={styles.row}>
           <div className={styles.body}>
@@ -31,7 +33,11 @@ const Clothes: React.FC = () => {
           <p>* Покупай добро, делай добро</p>
         </div>
         <div className={styles.scroll}>
-          <button>Scroll</button>
+          <button>
+            <ScrollLink to="welcome" spy={true} smooth={true} offset={0} duration={500}>
+              Scroll
+            </ScrollLink>
+          </button>
           <img src={bottomArrow} alt="arrow" />
         </div>
       </div>

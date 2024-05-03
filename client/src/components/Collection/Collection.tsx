@@ -13,7 +13,7 @@ const Collection: React.FC = () => {
         </div>
         <div className={styles.titles}>
           <h3 className="sub-title">давай сделаем покупки</h3>
-          <h2 className="title">What are you looking for?</h2>
+          <h2 className="title">Что Вы ищете?</h2>
         </div>
         <div className={styles.body}>
           <div className={styles.categories}>
