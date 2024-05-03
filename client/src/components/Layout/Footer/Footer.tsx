@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <img src={leaf} alt="leaf" className={styles.leaf} />
       <img src={leaf2} alt="leaf2" className={styles.leaf2} />
-      <ScrollLink to="clothes" spy={true} smooth={true} offset={0} duration={500}>
+      <ScrollLink to="header" spy={true} smooth={true} offset={0} duration={500}>
         <img src={up} alt="leaf2" className={styles.up} />
       </ScrollLink>
       <div className="container">

@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./Header.module.scss";
 
 import logo from "./../images/logo.svg";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isMenuActive, setIsMenuActive] = React.useState(false);
@@ -20,7 +21,7 @@ const Header: React.FC = () => {
   }, [isMenuActive]);
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} id="header">
       <div className={styles.rows}>
         <div className={styles.discounts}>
           <h2 className={styles.title}>Получите скидку 25% на покупку всей капсульной коллекции.</h2>
@@ -30,12 +31,16 @@ const Header: React.FC = () => {
         <div className="container">
           <div className={styles.body}>
             <div className={styles.logo}>
-              <img src={logo} alt="logo" />
+              <Link to="/">
+                <img src={logo} alt="logo" />
+              </Link>
             </div>
             <nav className={styles.nav}>
               <ul className={isMenuActive ? `${styles.list} ${styles.active}` : `${styles.list}`}>
                 <li className={styles.link}>Магазин</li>
-                <li className={styles.link}>Команда</li>
+                <li className={styles.link}>
+                  <Link to="/team">Команда</Link>
+                </li>
                 <li className={styles.link}>Наши вложения</li>
                 <li className={styles.link}>Подарочная карта</li>
                 <li className={styles.link}>FAQ</li>
