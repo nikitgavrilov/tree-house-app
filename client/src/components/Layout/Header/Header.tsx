@@ -37,7 +37,9 @@ const Header: React.FC = () => {
             </div>
             <nav className={styles.nav}>
               <ul className={isMenuActive ? `${styles.list} ${styles.active}` : `${styles.list}`}>
-                <li className={styles.link}>Магазин</li>
+                <li className={styles.link}>
+                  <Link to="/shop">Магазин</Link>
+                </li>
                 <li className={styles.link}>
                   <Link to="/team">Команда</Link>
                 </li>
