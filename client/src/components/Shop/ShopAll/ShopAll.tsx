@@ -12,7 +12,7 @@ const ShopAll: React.FC = () => {
       <div className="container">
         <h3 className={styles.navigation}>
           <span>
-            <Link to="/">Home</Link>
+            <Link to="/">Главная</Link>
           </span>
           <img src={arrow} alt="arrow" />
           Магазин

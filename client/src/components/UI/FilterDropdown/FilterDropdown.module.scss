@@ -1,0 +1,41 @@
+.dropdown {
+  width: 100%;
+  min-width: 200px;
+
+  position: relative;
+
+  .btn {
+    text-transform: uppercase;
+    color: #50735f;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      color: #884f56;
+    }
+
+    img {
+      transition: transform 0.3s;
+    }
+
+    &.active {
+      img {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .content {
+    overflow-y: auto;
+    min-height: 0px;
+    max-height: 200px;
+    color: #50735f;
+    margin: 12px 0 0 0;
+
+    .item {
+      cursor: pointer;
+    }
+  }
+}
