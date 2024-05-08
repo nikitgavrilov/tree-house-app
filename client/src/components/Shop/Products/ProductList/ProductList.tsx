@@ -20,12 +20,12 @@ import img14 from "./images/cloth/summer/14.png";
 const PRODUCTS = [
   {
     id: 0,
-    title: "Летняя одежда",
-    price: 5400,
+    title: "Весенняя рубашка",
+    price: 3400,
     image: img1,
-    collection: "summer",
+    collection: "spring",
     category: "top",
-    size: "7-8",
+    size: "9-10",
     material: "cotton",
     reviews: {
       total: 2,
@@ -34,8 +34,8 @@ const PRODUCTS = [
   },
   {
     id: 1,
-    title: "Летняя одежда",
-    price: 5400,
+    title: "Летняя Майка",
+    price: 2400,
     image: img2,
     collection: "summer",
     category: "top",
@@ -48,12 +48,12 @@ const PRODUCTS = [
   },
   {
     id: 2,
-    title: "Летняя одежда",
-    price: 5400,
+    title: "Летнее поло",
+    price: 2800,
     image: img3,
     collection: "summer",
     category: "top",
-    size: "7-8",
+    size: "6-7",
     material: "cotton",
     reviews: {
       total: 2,
@@ -62,12 +62,12 @@ const PRODUCTS = [
   },
   {
     id: 3,
-    title: "Летняя одежда",
-    price: 5400,
+    title: "Обычная майка",
+    price: 1200,
     image: img4,
     collection: "summer",
     category: "top",
-    size: "7-8",
+    size: "5-6",
     material: "cotton",
     reviews: {
       total: 2,
@@ -76,12 +76,12 @@ const PRODUCTS = [
   },
   {
     id: 4,
-    title: "Летняя одежда",
-    price: 5400,
+    title: "Рубашка красная",
+    price: 2600,
     image: img5,
     collection: "summer",
     category: "top",
-    size: "7-8",
+    size: "4-6",
     material: "cotton",
     reviews: {
       total: 2,
@@ -90,13 +90,13 @@ const PRODUCTS = [
   },
   {
     id: 5,
-    title: "Летняя одежда",
-    price: 5400,
+    title: "Комбинезон синий",
+    price: 5300,
     image: img6,
     collection: "summer",
     category: "top",
-    size: "7-8",
-    material: "cotton",
+    size: "2-3",
+    material: "linen",
     reviews: {
       total: 2,
       messages: [],
@@ -104,12 +104,12 @@ const PRODUCTS = [
   },
   {
     id: 6,
-    title: "Летняя одежда",
-    price: 5400,
+    title: "Юбка летняя",
+    price: 2200,
     image: img7,
     collection: "summer",
-    category: "top",
-    size: "7-8",
+    category: "bottom",
+    size: "3-4",
     material: "cotton",
     reviews: {
       total: 2,
@@ -118,13 +118,13 @@ const PRODUCTS = [
   },
   {
     id: 7,
-    title: "Летняя одежда",
-    price: 5400,
+    title: "Штаны весенние",
+    price: 2990,
     image: img8,
-    collection: "summer",
-    category: "top",
-    size: "7-8",
-    material: "cotton",
+    collection: "spring",
+    category: "bottom",
+    size: "5-6",
+    material: "linen",
     reviews: {
       total: 2,
       messages: [],
@@ -132,12 +132,12 @@ const PRODUCTS = [
   },
   {
     id: 8,
-    title: "Летняя одежда",
-    price: 5400,
+    title: "Спортивные штаны",
+    price: 1490,
     image: img9,
     collection: "summer",
-    category: "top",
-    size: "7-8",
+    category: "bottom",
+    size: "4-5",
     material: "cotton",
     reviews: {
       total: 2,
@@ -146,12 +146,12 @@ const PRODUCTS = [
   },
   {
     id: 9,
-    title: "Летняя одежда",
+    title: "Брюки для школы",
     price: 5400,
     image: img10,
     collection: "summer",
-    category: "top",
-    size: "7-8",
+    category: "bottom",
+    size: "9-10",
     material: "cotton",
     reviews: {
       total: 2,
@@ -160,11 +160,11 @@ const PRODUCTS = [
   },
   {
     id: 10,
-    title: "Летняя одежда",
-    price: 5400,
+    title: "Шорты летние",
+    price: 2100,
     image: img11,
     collection: "summer",
-    category: "top",
+    category: "bottom",
     size: "7-8",
     material: "cotton",
     reviews: {
@@ -174,12 +174,12 @@ const PRODUCTS = [
   },
   {
     id: 11,
-    title: "Летняя одежда",
-    price: 5400,
+    title: "Шорты красивые",
+    price: 1990,
     image: img12,
     collection: "summer",
-    category: "top",
-    size: "7-8",
+    category: "bottom",
+    size: "6-7",
     material: "cotton",
     reviews: {
       total: 2,
@@ -188,11 +188,11 @@ const PRODUCTS = [
   },
   {
     id: 12,
-    title: "Летняя одежда",
-    price: 5400,
+    title: "Шорты белые",
+    price: 2490,
     image: img13,
     collection: "summer",
-    category: "top",
+    category: "bottom",
     size: "7-8",
     material: "cotton",
     reviews: {
@@ -202,11 +202,11 @@ const PRODUCTS = [
   },
   {
     id: 13,
-    title: "Летняя одежда",
-    price: 5400,
+    title: "Шляпа зеленая",
+    price: 1000,
     image: img14,
     collection: "summer",
-    category: "top",
+    category: "hat",
     size: "7-8",
     material: "cotton",
     reviews: {
@@ -228,7 +228,7 @@ const ProductList: React.FC = () => {
               </div>
               <h3 className="sub-title">{product.title}</h3>
               <div className={styles.reviews}>
-                <p>Количество отзывов: {product.reviews.total}</p>
+                <p>Количество отзывов:{product.reviews.total}</p>
               </div>
               <h2 className={styles.price}>{product.price.toLocaleString("ru-RU", { style: "currency", currency: "RUB" })}</h2>
             </div>

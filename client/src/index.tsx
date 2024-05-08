@@ -3,6 +3,8 @@ import "./assets/styles/global.scss";
 import "./assets/styles/slider.scss";
 import "./assets/styles/transition.scss";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 import ReactDOM from "react-dom/client";
 import HomePage from "./pages/HomePage";
 import ErrorPage from "./pages/ErrorPage";
@@ -26,4 +28,8 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
-root.render(<RouterProvider router={router} />);
+root.render(
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
+);

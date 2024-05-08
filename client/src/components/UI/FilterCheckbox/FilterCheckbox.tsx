@@ -19,7 +19,7 @@ const FilterCheckbox: React.FC<FilterCheckboxProps> = ({ id, text }) => {
         id={id}
         className={styles.realCheckbox}
       />
-      <span className={styles.customCheckbox}></span>
+      <span onClick={() => setIsChecked(!isChecked)} className={styles.customCheckbox}></span>
       <label htmlFor={id}>{text}</label>
     </div>
   );
