@@ -9,7 +9,7 @@ const Manufacture: React.FC = () => {
     <section className={styles.manufacture}>
       <div className="container">
         <div className={styles.body}>
-          <h3 className="sub-title">Inquiry Before Creation: Crafting Conscious Clothing</h3>
+          <h3 className="sub-title">Исследование перед творением: создание одежды</h3>
           <h3 className="sub-title">
             <img src={arrow} alt="arrow" />
             Посмотрите, где мы производим одежду

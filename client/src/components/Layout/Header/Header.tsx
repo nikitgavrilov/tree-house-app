@@ -44,7 +44,6 @@ const Header: React.FC = () => {
                   <Link to="/team">Команда</Link>
                 </li>
                 <li className={styles.link}>Наши вложения</li>
-                <li className={styles.link}>Подарочная карта</li>
                 <li className={styles.link}>FAQ</li>
                 <li className={styles.link}>Контакты</li>
                 <div className={styles.tabletLinks}>

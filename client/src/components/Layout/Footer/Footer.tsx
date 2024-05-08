@@ -39,7 +39,6 @@ const Footer: React.FC = () => {
               <li className={styles.link}>Магазин</li>
               <li className={styles.link}>Команда</li>
               <li className={styles.link}>Наши вложения</li>
-              <li className={styles.link}>Подарочная карта</li>
               <li className={styles.link}>FAQ</li>
               <li className={styles.link}>Контакты</li>
             </ul>
