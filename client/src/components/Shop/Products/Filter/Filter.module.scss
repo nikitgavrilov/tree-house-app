@@ -1,5 +1,5 @@
 .filter {
-  width: 100%;
+  width: 200px;
 
   .divider {
     width: 100%;
@@ -18,5 +18,11 @@
     .item {
       margin: 20px 0;
     }
+  }
+}
+
+@media (max-width: 548px) {
+  .filter {
+    width: 100% !important;
   }
 }

@@ -1,6 +1,5 @@
 .dropdown {
-  width: 100%;
-  min-width: 200px;
+  width: 200px;
 
   position: relative;
   user-select: none;
@@ -38,5 +37,12 @@
     .item {
       cursor: pointer;
     }
+  }
+}
+
+@media (max-width: 548px) {
+  .dropdown {
+    width: 100% !important;
+    min-width: 200px;
   }
 }

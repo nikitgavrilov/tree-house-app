@@ -12,15 +12,15 @@ const Filter: React.FC = () => {
       <div className={styles.list}>
         <div className={styles.item}>
           <FilterDropdown title="Коллекция">
-            <FilterCheckbox id="summer collection" text="Летняя коллекция" />
+            <FilterCheckbox id="summer" text="Летняя коллекция" />
           </FilterDropdown>
         </div>
         <hr className={styles.divider} />
         <div className={styles.item}>
           <FilterDropdown title="Категории">
-            <FilterCheckbox id="tops" text="Верхняя одежда" />
-            <FilterCheckbox id="bottoms" text="Нижняя одежда" />
-            <FilterCheckbox id="hats" text="Шляпы" />
+            <FilterCheckbox id="top" text="Верхняя одежда" />
+            <FilterCheckbox id="bottom" text="Нижняя одежда" />
+            <FilterCheckbox id="hat" text="Шляпы" />
           </FilterDropdown>
         </div>
         <hr className={styles.divider} />

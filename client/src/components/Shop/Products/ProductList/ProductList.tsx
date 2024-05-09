@@ -16,6 +16,9 @@ import img11 from "./images/cloth/summer/11.png";
 import img12 from "./images/cloth/summer/12.png";
 import img13 from "./images/cloth/summer/13.png";
 import img14 from "./images/cloth/summer/14.png";
+import { useActions } from "../../../../hooks/useActions";
+import { useAppSelector } from "../../../../hooks/redux";
+import { IProduct } from "../../../../models/IProduct";
 
 const PRODUCTS = [
   {
@@ -217,9 +220,30 @@ const PRODUCTS = [
 ];
 
 const ProductList: React.FC = () => {
+  const { setProducts } = useActions();
+  const { products, selectedCategories } = useAppSelector((state) => state.productsReducer);
+
+  React.useEffect(() => {
+    setProducts(PRODUCTS);
+  }, []);
+
+  const filterProducts = (products: IProduct[], selectedCategories: string[]): IProduct[] => {
+    return products.filter((product) =>
+      selectedCategories.some(
+        (category) =>
+          product.collection === category ||
+          product.category === category ||
+          product.size === category ||
+          product.material === category
+      )
+    );
+  };
+
+  const filteredProducts = selectedCategories.length > 0 ? filterProducts(products, selectedCategories) : products;
+
   return (
     <div className={styles.body}>
-      {PRODUCTS.map((product) => {
+      {filteredProducts.map((product) => {
         return (
           <div key={product.id} className={styles.column}>
             <div className={styles.item}>

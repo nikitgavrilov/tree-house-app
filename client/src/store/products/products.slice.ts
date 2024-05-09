@@ -1,6 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { IProduct } from "../../models/IProduct";
 
-const initialState = {
+interface ProductStateProps {
+  products: IProduct[];
+  selectedCategories: string[];
+}
+
+const initialState: ProductStateProps = {
   products: [],
   selectedCategories: [],
 };
@@ -12,7 +18,7 @@ export const productsSlice = createSlice({
     setProducts: (state, action) => {
       state.products = action.payload;
     },
-    setSelectedCategories: (state, action) => {
+    setSelectedCategories: (state, action: PayloadAction<string[]>) => {
       state.selectedCategories = action.payload;
     },
   },
