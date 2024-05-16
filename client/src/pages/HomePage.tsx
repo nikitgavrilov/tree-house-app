@@ -1,4 +1,5 @@
 import React from "react";
+
 import Layout from "../components/Layout/Layout";
 import Clothes from "../components/Home/Clothes/Clothes";
 import Welcome from "../components/Home/Welcome/Welcome";

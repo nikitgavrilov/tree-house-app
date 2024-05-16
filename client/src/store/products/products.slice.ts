@@ -15,7 +15,7 @@ export const productsSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
-    setProducts: (state, action) => {
+    setProducts: (state, action: PayloadAction<IProduct[]>) => {
       state.products = action.payload;
     },
     setSelectedCategories: (state, action: PayloadAction<string[]>) => {

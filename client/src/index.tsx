@@ -10,6 +10,8 @@ import HomePage from "./pages/HomePage";
 import ErrorPage from "./pages/ErrorPage";
 import OurTeamPage from "./pages/OurTeamPage";
 import ShopPage from "./pages/ShopPage";
+import RegPage from "./pages/RegPage";
+import LoginPage from "./pages/LoginPage";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
   {
     path: "/team",
     element: <OurTeamPage />,
+  },
+  {
+    path: "/reg",
+    element: <RegPage />,
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
   },
 ]);
 

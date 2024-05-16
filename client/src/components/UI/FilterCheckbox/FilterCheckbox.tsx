@@ -15,8 +15,6 @@ const FilterCheckbox: React.FC<FilterCheckboxProps> = ({ id, text }) => {
   const { selectedCategories } = useAppSelector((state) => state.productsReducer);
   const { setSelectedCategories } = useActions();
 
-  console.log(selectedCategories);
-
   const handleCheckboxClick = () => {
     setIsChecked(!isChecked);
 

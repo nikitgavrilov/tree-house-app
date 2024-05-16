@@ -5,12 +5,13 @@
 
   .column {
     margin: 0 0 20px 0;
-    flex: 1 1 26%;
+    flex: 1 1 32%;
 
     .item {
       color: #50735f;
       .image {
         height: 400px;
+        max-width: 320px;
         overflow: hidden;
         img {
           width: 100%;
@@ -37,7 +38,7 @@
 
 @media (max-width: 1024px) {
   .column {
-    flex: 1 1 40% !important;
+    flex: 1 1 49% !important;
   }
 }
 @media (max-width: 767px) {

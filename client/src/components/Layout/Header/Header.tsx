@@ -1,12 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./Header.module.scss";
 
 import logo from "./../images/logo.svg";
-import { Link } from "react-router-dom";
+import { useCheckUserStatus } from "../../../hooks/useCheckUserStatus";
 
 const Header: React.FC = () => {
   const [isMenuActive, setIsMenuActive] = React.useState(false);
+  const isUserAuth = useCheckUserStatus();
 
   React.useEffect(() => {
     if (isMenuActive) {
@@ -19,6 +21,13 @@ const Header: React.FC = () => {
       document.body.classList.remove("lock");
     };
   }, [isMenuActive]);
+
+  const logoutUser = () => {
+    fetch("http://localhost:3001/api/v1/users/logout", {
+      method: "GET",
+      credentials: "include",
+    }).then(() => window.location.reload());
+  };
 
   return (
     <header className={styles.header} id="header">
@@ -47,14 +56,38 @@ const Header: React.FC = () => {
                 <li className={styles.link}>FAQ</li>
                 <li className={styles.link}>Контакты</li>
                 <div className={styles.tabletLinks}>
-                  <li className={styles.link}>Регистрация</li>
-                  <li className={styles.link}>Авторизация</li>
+                  {isUserAuth ? (
+                    <li onClick={() => logoutUser()} className={styles.link}>
+                      Выйти
+                    </li>
+                  ) : (
+                    <>
+                      <li className={styles.link}>
+                        <Link to="/reg">Регистрация</Link>
+                      </li>
+                      <li className={styles.link}>
+                        <Link to="/login">Авторизация</Link>
+                      </li>
+                    </>
+                  )}
                 </div>
               </ul>
             </nav>
             <ul className={styles.other}>
-              <li className={styles.link}>Регистрация</li>
-              <li className={styles.link}>Авторизация</li>
+              {isUserAuth ? (
+                <li onClick={() => logoutUser()} className={styles.link}>
+                  Выйти
+                </li>
+              ) : (
+                <>
+                  <li className={styles.link}>
+                    <Link to="/reg">Регистрация</Link>
+                  </li>
+                  <li className={styles.link}>
+                    <Link to="/login">Авторизация</Link>
+                  </li>
+                </>
+              )}
             </ul>
             <div
               onClick={() => setIsMenuActive(!isMenuActive)}

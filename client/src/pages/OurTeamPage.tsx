@@ -1,4 +1,5 @@
 import React from "react";
+
 import Layout from "../components/Layout/Layout";
 import Info from "../components/OurTeam/Info/Info";
 import WeCommitted from "../components/OurTeam/WeCommitted/WeCommitted";
