@@ -13,12 +13,17 @@ import ShopPage from "./pages/ShopPage";
 import RegPage from "./pages/RegPage";
 import LoginPage from "./pages/LoginPage";
 import ProductPage from "./pages/ProductPage";
+import AdminPage from "./pages/AdminPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "/admin",
+    element: <AdminPage />,
   },
   {
     path: "/shop",

@@ -18,8 +18,13 @@ const Login: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    await loginUser(user);
-    navigate("/");
+    if (user.login === "admin" && user.password === "admin") {
+      await loginUser(user);
+      navigate("/admin");
+    } else {
+      await loginUser(user);
+      navigate("/");
+    }
   };
 
   return (

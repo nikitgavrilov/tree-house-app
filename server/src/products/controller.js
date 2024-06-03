@@ -16,7 +16,16 @@ const getProductById = (req, res) => {
   });
 };
 
+const deleteProduct = (req, res) => {
+  const id = parseInt(req.params.id);
+  conn.query(queries.deleteProduct, [id], (error, result) => {
+    if (error) throw error;
+    res.json("Success");
+  });
+};
+
 module.exports = {
   getProducts,
   getProductById,
+  deleteProduct,
 };

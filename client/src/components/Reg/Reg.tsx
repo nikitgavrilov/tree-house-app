@@ -18,7 +18,11 @@ const Reg: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    addUser(user).then(() => navigate("/login"));
+    if (user.login === "admin") {
+      alert("Недопустимый логин");
+    } else {
+      addUser(user).then(() => navigate("/login"));
+    }
   };
 
   return (

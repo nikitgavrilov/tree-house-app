@@ -30,7 +30,9 @@ const Footer: React.FC = () => {
         <div className={styles.body}>
           <div className={styles.author}>
             <div className={styles.logo}>
-              <img src={logo} alt="logo" />
+              <Link to="/">
+                <img src={logo} alt="logo" />
+              </Link>
             </div>
             <h2 className={styles.title}>Tree House 2024 © All Rights reserved</h2>
           </div>
@@ -49,9 +51,15 @@ const Footer: React.FC = () => {
             </ul>
             <ul className={styles.list}>
               <h2 className={styles.title}>Соц. сети</h2>
-              <li className={styles.link}>VK</li>
-              <li className={styles.link}>Pinterest</li>
-              <li className={styles.link}>Instagram</li>
+              <li className={styles.link}>
+                <a href="https://vk.com/">VK</a>
+              </li>
+              <li className={styles.link}>
+                <a href="https://ru.pinterest.com/">Pinterest</a>
+              </li>
+              <li className={styles.link}>
+                <a href="https://www.youtube.com/">Youtube</a>
+              </li>
             </ul>
             <ul className={styles.list}>
               <h2 className={styles.title}>Обслуживание клиентов</h2>

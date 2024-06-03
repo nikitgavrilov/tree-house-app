@@ -11,6 +11,9 @@ import PerfectMatch from "../components/Home/PerfectMatch/PerfectMatch";
 import Transparency from "../components/Home/Transparency/Transparency";
 
 const HomePage: React.FC = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Layout>
       <Clothes />

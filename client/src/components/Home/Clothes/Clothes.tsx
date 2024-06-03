@@ -36,7 +36,7 @@ const Clothes: React.FC = () => {
         </div>
         <div className={styles.scroll}>
           <button>
-            <ScrollLink to="welcome" spy={true} smooth={true} offset={0} duration={500}>
+            <ScrollLink to="welcome" spy={true} smooth={true} offset={-100} duration={500}>
               Scroll
             </ScrollLink>
           </button>

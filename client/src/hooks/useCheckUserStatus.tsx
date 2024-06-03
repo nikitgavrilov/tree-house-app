@@ -1,6 +1,9 @@
 import React from "react";
 export const useCheckUserStatus = () => {
-  const [isUserAuth, setIsUserAuth] = React.useState(false);
+  const [isUserAuth, setIsUserAuth] = React.useState({
+    isAuth: false,
+    login: "",
+  });
 
   React.useEffect(() => {
     const fetchUser = async () => {
@@ -12,9 +15,9 @@ export const useCheckUserStatus = () => {
         if (response.ok) {
           const data = await response.json();
           if (data.error === "Вы не авторизованы") {
-            setIsUserAuth(false);
+            setIsUserAuth({ ...data, isAuth: false, login: "" });
           } else if (data.status === "Success") {
-            setIsUserAuth(true);
+            setIsUserAuth({ ...data, isAuth: true, login: data.login });
           }
         }
       } catch {

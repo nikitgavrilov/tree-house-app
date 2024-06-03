@@ -1,14 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import styles from "./Header.module.scss";
 
 import logo from "./../images/logo.svg";
+import { Link, useNavigate } from "react-router-dom";
 import { useCheckUserStatus } from "../../../hooks/useCheckUserStatus";
 
 const Header: React.FC = () => {
   const [isMenuActive, setIsMenuActive] = React.useState(false);
   const isUserAuth = useCheckUserStatus();
+
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     if (isMenuActive) {
@@ -74,10 +76,27 @@ const Header: React.FC = () => {
               </ul>
             </nav>
             <ul className={styles.other}>
-              {isUserAuth ? (
-                <li onClick={() => logoutUser()} className={styles.link}>
-                  Выйти
-                </li>
+              {isUserAuth.isAuth ? (
+                <>
+                  <li
+                    onClick={() => {
+                      logoutUser();
+                      navigate("/");
+                    }}
+                    className={styles.link}
+                  >
+                    Выйти
+                  </li>
+                  {isUserAuth.login === "admin" ? (
+                    <li className={styles.link}>
+                      <Link to="/admin">Панель администратора</Link>
+                    </li>
+                  ) : (
+                    <li className={styles.link}>
+                      <Link to="/">Личный кабинет</Link>
+                    </li>
+                  )}
+                </>
               ) : (
                 <>
                   <li className={styles.link}>
