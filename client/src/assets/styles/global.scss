@@ -13,6 +13,10 @@
 
   .orange {
     background-color: #c58a46;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
 
     &:hover {
       background-color: #f39323;
@@ -23,6 +27,10 @@
     border: 2px solid #50735f;
     color: #50735f;
     text-transform: uppercase;
+    a {
+      color: #50735f;
+      text-decoration: none;
+    }
   }
 
   > * {
@@ -41,4 +49,18 @@
 .sub-title {
   color: #50735f;
   text-transform: uppercase;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 24px 0;
+
+  span,
+  a {
+    text-decoration: none;
+    color: #92a699;
+  }
+  color: #50735f;
 }

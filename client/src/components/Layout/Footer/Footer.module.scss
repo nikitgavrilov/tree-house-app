@@ -53,6 +53,10 @@
           margin: 0 0 24px 0;
         }
         .link {
+          a {
+            color: #fff;
+            text-decoration: none;
+          }
           cursor: pointer;
           &:hover {
             text-decoration: underline;

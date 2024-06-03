@@ -3,8 +3,8 @@ import { IUser } from "../../models/IUser";
 
 const API_URL = "http://localhost:3001/api/v1/users";
 
-export const api = createApi({
-  reducerPath: "api",
+export const userApi = createApi({
+  reducerPath: "userApi",
   baseQuery: fetchBaseQuery({
     baseUrl: API_URL,
   }),
@@ -33,4 +33,4 @@ export const api = createApi({
   }),
 });
 
-export const { useGetUserQuery, useAddUserMutation, useLoginUserMutation } = api;
+export const { useGetUserQuery, useAddUserMutation, useLoginUserMutation } = userApi;

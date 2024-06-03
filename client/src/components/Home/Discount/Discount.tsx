@@ -5,7 +5,7 @@ import styles from "./Discount.module.scss";
 import vectors from "./images/vectors.svg";
 import twentyFive from "./images/twenty-five.svg";
 import star from "./../../../assets/images/star.svg";
-import arrow from "./../../../assets/images/arrow.svg";
+import { Link } from "react-router-dom";
 
 const Discount: React.FC = () => {
   return (
@@ -23,9 +23,13 @@ const Discount: React.FC = () => {
         </p>
         <div className={styles.links}>
           <div className="buttons">
-            <button className="orange">КУПИТЬ СЕЙЧАС</button>
             <button className="orange">
-              <img src={arrow} alt="arrow" />
+              <Link to="/shop">КУПИТЬ СЕЙЧАС</Link>
+            </button>
+            <button className="orange">
+              <Link to="/shop">
+                <img src="/images/general/arrow.svg" alt="arrow" />
+              </Link>
             </button>
           </div>
         </div>

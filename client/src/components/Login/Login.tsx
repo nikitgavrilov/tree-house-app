@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./../Reg/Reg.module.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { IUser } from "../../models/IUser";
-import { useLoginUserMutation } from "../../store/api/api";
+import { useLoginUserMutation } from "../../store/api/userApi";
 
 const DEFAULT_USER = {
   login: "",

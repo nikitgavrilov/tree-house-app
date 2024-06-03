@@ -4,14 +4,13 @@ import styles from "./WeCommitted.module.scss";
 
 import bg from "./images/bg.svg";
 import kids from "./images/kids.svg";
-import leaf from "./../../../assets/images/leaf.svg";
 
 const WeCommitted: React.FC = () => {
   return (
     <section className={styles.weCommitted}>
       <div className="container" style={{ position: "relative" }}>
         <img src={kids} alt="kids" className={styles.kids} />
-        <img src={leaf} alt="leaf" className={styles.leaf} />
+        <img src="/images/general/leaf.svg" alt="leaf" className={styles.leaf} />
         <div className={styles.body}>
           <div className={styles.content}>
             <div className={styles.image}>

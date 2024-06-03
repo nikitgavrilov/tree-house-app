@@ -12,6 +12,7 @@ import OurTeamPage from "./pages/OurTeamPage";
 import ShopPage from "./pages/ShopPage";
 import RegPage from "./pages/RegPage";
 import LoginPage from "./pages/LoginPage";
+import ProductPage from "./pages/ProductPage";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/shop",
     element: <ShopPage />,
+  },
+  {
+    path: "/shop/:id",
+    element: <ProductPage />,
   },
   {
     path: "/team",

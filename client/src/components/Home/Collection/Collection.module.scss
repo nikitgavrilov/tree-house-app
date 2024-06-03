@@ -41,6 +41,11 @@
         padding: 15px;
         transition: color, background-size 0.3s;
 
+        a {
+          color: #50735f;
+          text-decoration: none;
+        }
+
         &:hover {
           color: #c58a46;
           background-size: 100%;

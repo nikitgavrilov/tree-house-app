@@ -3,18 +3,17 @@ import React from "react";
 import styles from "./ShopAll.module.scss";
 
 import shopAll from "./images/shop-all.jpg";
-import arrow from "./../../../assets/images/arrow-green.svg";
 import { Link } from "react-router-dom";
 
 const ShopAll: React.FC = () => {
   return (
     <section className={styles.shopAll}>
       <div className="container">
-        <h3 className={styles.navigation}>
+        <h3 className="navigation">
           <span>
             <Link to="/">Главная</Link>
           </span>
-          <img src={arrow} alt="arrow" />
+          <img src={"/images/general/arrow-green.svg"} alt="arrow" />
           Магазин
         </h3>
         <div className={styles.body}>

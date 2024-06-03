@@ -4,7 +4,7 @@ import styles from "./Welcome.module.scss";
 
 import leaf from "./images/leaf.svg";
 import treehouse from "./images/treehouse.svg";
-import arrow from "./../../../assets/images/arrow-green.svg";
+import { Link } from "react-router-dom";
 
 const Welcome: React.FC = () => {
   return (
@@ -34,9 +34,13 @@ const Welcome: React.FC = () => {
             </p>
             <div className={styles.readMore}>
               <div className="buttons">
-                <button className="green">Почитать больше</button>
                 <button className="green">
-                  <img src={arrow} alt="arrow" />
+                  <Link to="/team">Почитать больше</Link>
+                </button>
+                <button className="green">
+                  <Link to="/team">
+                    <img src={"/images/general/arrow-green.svg"} alt="arrow" />
+                  </Link>
                 </button>
               </div>
             </div>

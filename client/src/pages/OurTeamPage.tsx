@@ -8,6 +8,9 @@ import Manufacture from "../components/OurTeam/Manufacture/Manufacture";
 import Mission from "../components/OurTeam/Mission/Mission";
 
 const OurTeamPage: React.FC = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Layout>
       <Info />

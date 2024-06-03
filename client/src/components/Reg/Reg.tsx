@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./Reg.module.scss";
 import { Link, useNavigate } from "react-router-dom";
-import { useAddUserMutation } from "../../store/api/api";
+import { useAddUserMutation } from "../../store/api/userApi";
 import { IUser } from "../../models/IUser";
 
 const DEFAULT_USER = {

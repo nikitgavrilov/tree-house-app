@@ -2,8 +2,6 @@ import React from "react";
 export const useCheckUserStatus = () => {
   const [isUserAuth, setIsUserAuth] = React.useState(false);
 
-  console.log(isUserAuth);
-
   React.useEffect(() => {
     const fetchUser = async () => {
       try {

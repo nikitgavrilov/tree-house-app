@@ -5,11 +5,19 @@ import styles from "./Info.module.scss";
 import short from "./images/short.svg";
 import shortTwo from "./images/short-2.svg";
 import sky from "./images/sky.svg";
+import { Link } from "react-router-dom";
 
 const Info: React.FC = () => {
   return (
     <section className={styles.info}>
       <div className="container" style={{ position: "relative" }}>
+        <h3 className="navigation">
+          <span>
+            <Link to="/">Главная</Link>
+          </span>
+          <img src={"/images/general/arrow-green.svg"} alt="arrow" />
+          Команда
+        </h3>
         <img src={sky} alt="sky" className={styles.sky} />
         <div className={styles.body}>
           <div className={styles.image}>

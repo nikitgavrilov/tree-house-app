@@ -1,11 +1,9 @@
 import React from "react";
 
-import { Link as ScrollLink } from "react-scroll";
-
 import styles from "./Clothes.module.scss";
 
-import arrow from "./../../../assets/images/arrow.svg";
-import bottomArrow from "./images/bottom-arrow.svg";
+import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Clothes: React.FC = () => {
   return (
@@ -22,9 +20,13 @@ const Clothes: React.FC = () => {
               завело воображение.
             </p>
             <div className="buttons">
-              <button className="orange">КУПИТЬ СЕЙЧАС</button>
               <button className="orange">
-                <img src={arrow} alt="arrow" />
+                <Link to="/shop">КУПИТЬ СЕЙЧАС</Link>
+              </button>
+              <button className="orange">
+                <Link to="/shop">
+                  <img src="/images/general/arrow.svg" alt="arrow" />
+                </Link>
               </button>
             </div>
           </div>
@@ -38,7 +40,7 @@ const Clothes: React.FC = () => {
               Scroll
             </ScrollLink>
           </button>
-          <img src={bottomArrow} alt="arrow" />
+          <img src="/images/general/arrow.svg" alt="arrow" />
         </div>
       </div>
     </section>

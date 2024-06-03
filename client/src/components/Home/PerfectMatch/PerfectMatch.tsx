@@ -6,9 +6,6 @@ import React from "react";
 
 import styles from "./PerfectMatch.module.scss";
 
-import arrow from "./../../../assets/images/arrow-green.svg";
-import leaf from "./../../../assets/images/leaf.svg";
-
 const outfits = [
   {
     id: 0,
@@ -109,7 +106,7 @@ const PerfectMatch: React.FC = () => {
         <div className={styles.body}>
           <div className="slider-container" style={{ position: "relative" }}>
             <div className={styles.leaf}>
-              <img src={leaf} alt="leaf" />
+              <img src={"/images/general/leaf.svg"} alt="leaf" />
             </div>
             <Slider {...settings}>
               {outfits.map((outfit) => (
@@ -141,7 +138,7 @@ const PerfectMatch: React.FC = () => {
                   </div>
                   <p className={styles.description}>{outfit.description}</p>
                   <div className={styles.view}>
-                    <img src={arrow} alt="arrow" />
+                    <img src="/images/general/arrow-green.svg" alt="arrow" />
                     <p>Посмотреть продукт</p>
                   </div>
                 </div>

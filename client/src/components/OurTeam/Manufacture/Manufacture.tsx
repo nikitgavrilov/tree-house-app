@@ -2,8 +2,6 @@ import React from "react";
 
 import styles from "./Manufacture.module.scss";
 
-import arrow from "./../../../assets/images/arrow-green.svg";
-
 const Manufacture: React.FC = () => {
   return (
     <section className={styles.manufacture}>
@@ -11,7 +9,7 @@ const Manufacture: React.FC = () => {
         <div className={styles.body}>
           <h3 className="sub-title">Исследование перед творением: создание одежды</h3>
           <h3 className="sub-title">
-            <img src={arrow} alt="arrow" />
+            <img src={"/images/general/arrow-green.svg"} alt="arrow" />
             Посмотрите, где мы производим одежду
           </h3>
         </div>

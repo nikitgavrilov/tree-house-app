@@ -2,6 +2,7 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const userRoutes = require("./src/users/routes");
+const productRoutes = require("./src/products/routes");
 
 const app = express();
 const port = 3001;
@@ -16,5 +17,6 @@ app.use(
 );
 
 app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/products", productRoutes);
 
 app.listen(port, () => console.log(`app listening on port ${port}`));

@@ -16,6 +16,7 @@ import googlePay from "./../images/payments/Google_Pay.svg";
 import applePay from "./../images/payments/apple-pay.svg";
 import afterPay from "./../images/payments/Afterpay.svg";
 import shopPay from "./../images/payments/ShopPay.svg";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -36,8 +37,12 @@ const Footer: React.FC = () => {
           <div className={styles.footerLinks}>
             <ul className={styles.list}>
               <h2 className={styles.title}>Навигация по сайту</h2>
-              <li className={styles.link}>Магазин</li>
-              <li className={styles.link}>Команда</li>
+              <li className={styles.link}>
+                <Link to="/shop">Магазин</Link>
+              </li>
+              <li className={styles.link}>
+                <Link to="/team">Команда</Link>
+              </li>
               <li className={styles.link}>Наши вложения</li>
               <li className={styles.link}>FAQ</li>
               <li className={styles.link}>Контакты</li>

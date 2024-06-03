@@ -2,14 +2,12 @@ import React from "react";
 
 import styles from "./Vision.module.scss";
 
-import leaf from "./../../../assets/images/leaf.svg";
-
 const Vision: React.FC = () => {
   return (
     <section className={styles.vision}>
       <div className="container" style={{ position: "relative" }}>
-        <img src={leaf} alt="leaf" className={styles.bigLeaf} />
-        <img src={leaf} alt="leaf" className={styles.leaf} />
+        <img src="/images/general/leaf.svg" alt="leaf" className={styles.bigLeaf} />
+        <img src="/images/general/leaf.svg" alt="leaf" className={styles.leaf} />
         <div className={styles.body}>
           <div className={styles.left}>
             <h3 className="sub-title">устойчивость и уважение</h3>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 14 2024 г., 08:10
+-- Время создания: Май 24 2024 г., 16:32
 -- Версия сервера: 8.0.30
 -- Версия PHP: 7.4.30
 
@@ -39,7 +39,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `login`, `password`) VALUES
-(4, 'test@gmail.com', 'login', '$2b$10$Ms/hdhKtbFgIgHUf4jlfD.Kr3NF2LNjvI4qAZUL0VRZt0HiCrPBwC');
+(4, 'test@gmail.com', 'login', '$2b$10$Ms/hdhKtbFgIgHUf4jlfD.Kr3NF2LNjvI4qAZUL0VRZt0HiCrPBwC'),
+(6, 'gavrilovnikita2004@gmail.com', '', '$2b$10$EOXhQYZ1eKL1yAFMh5y1i.g9iiipMqR6ki7mYuc0xxkZtUhtzKJoy'),
+(7, 'gavrilovnikita2004@gmail.com', 'login', '$2b$10$3itrnmiwIwlmoNPPNNNk6.0zwo0It4jPBuYCZaytkrGQDgVskCtem');
 
 --
 -- Индексы сохранённых таблиц
@@ -59,7 +61,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
