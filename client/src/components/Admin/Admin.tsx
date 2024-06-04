@@ -24,12 +24,21 @@ const Admin: React.FC = () => {
 
   const [isModalActive, setIsModalActive] = React.useState(false);
 
+  const [idToEdit, setIdToEdit] = React.useState<number | null>(null);
+  const [modalMode, setModalMode] = React.useState<"add" | "edit" | null>(null);
+
   return (
     <section className={styles.admin}>
-      <Modal mode="add" isModalActive={isModalActive} setIsModalActive={setIsModalActive} />
       <div className="container">
         <div className={styles.add}>
-          <button onClick={() => setIsModalActive(true)}>Добавить продукт</button>
+          <button
+            onClick={() => {
+              setIsModalActive(true);
+              setModalMode("add");
+            }}
+          >
+            Добавить продукт
+          </button>
         </div>
       </div>
       <div className={styles.table}>
@@ -119,11 +128,32 @@ const Admin: React.FC = () => {
           <h2 className={styles.title}>&nbsp;</h2>
           {data?.map((item) => (
             <li key={item.id} className={`${styles.item} ${styles.edit}`}>
-              <button className={styles.edit}>Редактировать</button>
+              <button
+                onClick={() => {
+                  setIsModalActive(true);
+                  setModalMode("edit");
+                  setIdToEdit(item.id);
+                }}
+                className={styles.edit}
+              >
+                Редактировать
+              </button>
             </li>
           ))}
         </ul>
       </div>
+      {modalMode === "add" && <Modal mode="add" isModalActive={isModalActive} setIsModalActive={setIsModalActive} />}
+      {data?.map((item) => {
+        if (item.id === idToEdit) {
+          return (
+            <React.Fragment key={item.id}>
+              {modalMode === "edit" && (
+                <Modal productToEdit={item} mode="edit" isModalActive={isModalActive} setIsModalActive={setIsModalActive} />
+              )}
+            </React.Fragment>
+          );
+        }
+      })}
     </section>
   );
 };

@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./Modal.module.scss";
 import ModalDropdown from "../UI/ModalDropdown/ModalDropdown";
 import { IProduct } from "../../models/IProduct";
-import { useAddProductMutation } from "../../store/api/productsApi";
+import { useAddProductMutation, useEditProgramMutation } from "../../store/api/productsApi";
 
 interface ModalAdd {
   mode: "add";
@@ -12,6 +12,7 @@ interface ModalAdd {
 }
 interface ModalEdit {
   mode: "edit";
+  productToEdit: IProduct;
   isModalActive: boolean;
   setIsModalActive: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -57,24 +58,29 @@ const Modal: React.FC<ModalProps> = (props) => {
     linen: false,
   });
 
-  const [product, setProduct] = React.useState<Omit<IProduct, "id">>(DEFAULT_PRODUCT);
+  const [product, setProduct] = React.useState<Omit<IProduct, "id" | "reviews">>(isEdit ? props.productToEdit : DEFAULT_PRODUCT);
   const [addProduct] = useAddProductMutation();
+  const [editProduct] = useEditProgramMutation();
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (isEdit) {
-      console.log("edit");
+      editProduct({ id: props.productToEdit.id, product });
+      props.setIsModalActive(false);
     } else {
       addProduct(product);
-      setProduct(DEFAULT_PRODUCT);
       props.setIsModalActive(false);
+      setProduct(DEFAULT_PRODUCT);
     }
   };
 
   return (
     <div
       className={props.isModalActive ? `${styles.modal} ${styles.active}` : `${styles.modal}`}
-      onClick={() => props.setIsModalActive(false)}
+      onClick={() => {
+        props.setIsModalActive(false);
+        setProduct(DEFAULT_PRODUCT);
+      }}
     >
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <form onSubmit={handleFormSubmit} className={styles.form}>
@@ -364,7 +370,13 @@ const Modal: React.FC<ModalProps> = (props) => {
             <button>Подтвердить</button>
           </div>
         </form>
-        <div className={styles.close} onClick={() => props.setIsModalActive(false)}>
+        <div
+          className={styles.close}
+          onClick={() => {
+            props.setIsModalActive(false);
+            setProduct(DEFAULT_PRODUCT);
+          }}
+        >
           <svg
             fill="#50735f"
             height="38px"
