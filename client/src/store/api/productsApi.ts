@@ -24,7 +24,15 @@ export const productsApi = createApi({
       }),
       invalidatesTags: ["Product"],
     }),
+    addProduct: builder.mutation({
+      query: (data) => ({
+        url: "/",
+        body: data,
+        method: "POST",
+      }),
+      invalidatesTags: ["Product"],
+    }),
   }),
 });
 
-export const { useGetProductsQuery, useGetProductByIdQuery, useDeleteProductMutation } = productsApi;
+export const { useGetProductsQuery, useGetProductByIdQuery, useDeleteProductMutation, useAddProductMutation } = productsApi;

@@ -31,14 +31,25 @@ const Header: React.FC = () => {
     }).then(() => window.location.reload());
   };
 
+  const currentUrl = window.location.pathname;
+  const adminUrl = currentUrl === "/admin";
+
   return (
     <header className={styles.header} id="header">
       <div className={styles.rows}>
-        <div className={styles.discounts}>
-          <h2 className={styles.title}>Получите скидку 25% на покупку всей капсульной коллекции.</h2>
-          <div className={styles.divider} />
-          <h2 className={styles.title}>Подпишитесь на нас и получите скидку 15% на первый заказ</h2>
-        </div>
+        {adminUrl ? (
+          <div className={styles.discounts}>
+            <h2 className={styles.title}>Добро пожаловать</h2>
+            <div className={styles.divider} />
+            <h2 className={styles.title}>пользователь admin</h2>
+          </div>
+        ) : (
+          <div className={styles.discounts}>
+            <h2 className={styles.title}>Получите скидку 25% на покупку всей капсульной коллекции.</h2>
+            <div className={styles.divider} />
+            <h2 className={styles.title}>Подпишитесь на нас и получите скидку 15% на первый заказ</h2>
+          </div>
+        )}
         <div className="container">
           <div className={styles.body}>
             <div className={styles.logo}>

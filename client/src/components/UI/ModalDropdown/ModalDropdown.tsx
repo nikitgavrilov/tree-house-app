@@ -1,14 +1,14 @@
 import React from "react";
+
+import styles from "./ModalDropdown.module.scss";
 import { CSSTransition } from "react-transition-group";
 
-import styles from "./FilterDropdown.module.scss";
-
-interface FilterDropdownProps {
+interface ModalDropdownProps {
   title: string;
   children: React.ReactNode;
 }
 
-const FilterDropdown: React.FC<FilterDropdownProps> = ({ title, children }) => {
+const ModalDropdown: React.FC<ModalDropdownProps> = ({ title, children }) => {
   const [isActive, setIsActive] = React.useState(true);
 
   return (
@@ -18,10 +18,10 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({ title, children }) => {
         <img src={"/images/general/dropdown-arrow.svg"} alt="arrow" />
       </div>
       <CSSTransition in={isActive} timeout={300} classNames="alert" unmountOnExit>
-        {() => <div className={`${styles.content}`}>{children}</div>}
+        {() => <ul className={`${styles.list}`}>{children}</ul>}
       </CSSTransition>
     </div>
   );
 };
 
-export default FilterDropdown;
+export default ModalDropdown;

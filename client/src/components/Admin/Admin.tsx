@@ -5,20 +5,33 @@ import styles from "./Admin.module.scss";
 import { useDeleteProductMutation, useGetProductsQuery } from "../../store/api/productsApi";
 import { useCheckUserStatus } from "../../hooks/useCheckUserStatus";
 import { useNavigate } from "react-router-dom";
+import Modal from "../Modal/Modal";
 
 const Admin: React.FC = () => {
+  const [isLoading, setIsLoading] = React.useState(false);
   const userStatus = useCheckUserStatus();
   const navigate = useNavigate();
-  if (userStatus.login !== "admin") {
-    navigate("/");
-  }
+  React.useEffect(() => {
+    if (!isLoading) {
+      if (userStatus.login && userStatus.login !== "admin") {
+        navigate("/");
+      }
+    }
+  }, [isLoading, userStatus]);
 
   const { data } = useGetProductsQuery(null);
-
   const [deleteProduct] = useDeleteProductMutation();
+
+  const [isModalActive, setIsModalActive] = React.useState(false);
 
   return (
     <section className={styles.admin}>
+      <Modal mode="add" isModalActive={isModalActive} setIsModalActive={setIsModalActive} />
+      <div className="container">
+        <div className={styles.add}>
+          <button onClick={() => setIsModalActive(true)}>Добавить продукт</button>
+        </div>
+      </div>
       <div className={styles.table}>
         <ul className={styles.list}>
           <h2 className={styles.title}>Номер</h2>

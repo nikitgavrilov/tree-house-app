@@ -24,8 +24,28 @@ const deleteProduct = (req, res) => {
   });
 };
 
+const addProduct = (req, res) => {
+  const values = [
+    req.body.title,
+    req.body.description,
+    req.body.price,
+    req.body.image,
+    req.body.collection,
+    req.body.category,
+    req.body.size,
+    req.body.material,
+    req.body.reviews,
+  ];
+
+  conn.query(queries.addProduct, [values], (error, result) => {
+    if (error) throw error;
+    res.status(201).json("Success");
+  });
+};
+
 module.exports = {
   getProducts,
   getProductById,
   deleteProduct,
+  addProduct,
 };

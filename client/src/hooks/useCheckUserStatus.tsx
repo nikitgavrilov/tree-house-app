@@ -14,7 +14,7 @@ export const useCheckUserStatus = () => {
         });
         if (response.ok) {
           const data = await response.json();
-          if (data.error === "Вы не авторизованы") {
+          if (data.status !== "Success") {
             setIsUserAuth({ ...data, isAuth: false, login: "" });
           } else if (data.status === "Success") {
             setIsUserAuth({ ...data, isAuth: true, login: data.login });
